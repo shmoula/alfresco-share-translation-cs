@@ -1,0 +1,22 @@
+Translation of Share project for Alfresco DMS
+=============================================
+
+Preparation
+===========
+
+Prune all except *_en.properties:
+find ./ -name "*_en.properties" -prune -o -exec rm '{}' ';'
+
+Rename all _en to _cs:
+for FILE in `find . -name *.properties`; do NEW=`echo $FILE | sed -e 's/_en.properties/_cs.properties/'`; mv "$FILE" "$NEW"; done
+
+
+
+Resources
+=========
+
+Properties editors:
+http://www.zaval.org/products/jrc-editor/download/index.html
+
+Alfresco Language pack development readme
+http://wiki.alfresco.com/wiki/Language_Pack_Development
